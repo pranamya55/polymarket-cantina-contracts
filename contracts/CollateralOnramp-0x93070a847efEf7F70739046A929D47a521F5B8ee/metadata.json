@@ -1,0 +1,41 @@
+{
+  "name": "CollateralOnramp",
+  "address": "0x93070a847efEf7F70739046A929D47a521F5B8ee",
+  "explorerUrl": "https://polygonscan.com/address/0x93070a847efEf7F70739046A929D47a521F5B8ee",
+  "fetchedAt": "2026-04-13T18:21:37.892Z",
+  "codeSize": 2651,
+  "proxy": {
+    "isProxy": false,
+    "proxyType": null,
+    "implementation": null,
+    "beacon": null,
+    "resolvedAddress": "0x93070a847efEf7F70739046A929D47a521F5B8ee"
+  },
+  "explorer": {
+    "resolvedAddress": "0x93070a847efEf7F70739046A929D47a521F5B8ee",
+    "contractName": "CollateralOnramp",
+    "contractFileName": "src/collateral/CollateralOnramp.sol",
+    "compilerVersion": "v0.8.34+commit.80d5c536",
+    "compilerType": "solc-j",
+    "optimizationUsed": "1",
+    "runs": "1000000",
+    "evmVersion": "prague",
+    "constructorArguments": "00000000000000000000000047ebfac3353314c788b96cdcbf41daadfe03629c0000000000000000000000003dce0a29139a851da1dfca56af8e8a6440b4d952000000000000000000000000c011a7e12a19f7b1f670d46f03b03f3342e82dfb",
+    "licenseType": "",
+    "sourceFiles": [
+      "src/collateral/CollateralOnramp.sol",
+      "lib/solady/src/auth/OwnableRoles.sol",
+      "lib/solady/src/utils/SafeTransferLib.sol",
+      "src/collateral/abstract/CollateralErrors.sol",
+      "src/collateral/abstract/Pausable.sol",
+      "src/collateral/CollateralToken.sol",
+      "lib/solady/src/auth/Ownable.sol",
+      "lib/solady/src/tokens/ERC20.sol",
+      "lib/solady/src/utils/Initializable.sol",
+      "lib/solady/src/utils/UUPSUpgradeable.sol",
+      "src/collateral/interfaces/ICollateralToken.sol",
+      "src/collateral/interfaces/ICollateralTokenCallbacks.sol",
+      "lib/solady/src/utils/CallContextChecker.sol"
+    ]
+  }
+}

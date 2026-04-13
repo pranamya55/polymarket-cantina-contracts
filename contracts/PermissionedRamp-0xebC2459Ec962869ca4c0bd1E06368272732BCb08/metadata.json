@@ -1,0 +1,43 @@
+{
+  "name": "PermissionedRamp",
+  "address": "0xebC2459Ec962869ca4c0bd1E06368272732BCb08",
+  "explorerUrl": "https://polygonscan.com/address/0xebC2459Ec962869ca4c0bd1E06368272732BCb08",
+  "fetchedAt": "2026-04-13T18:21:39.823Z",
+  "codeSize": 4780,
+  "proxy": {
+    "isProxy": false,
+    "proxyType": null,
+    "implementation": null,
+    "beacon": null,
+    "resolvedAddress": "0xebC2459Ec962869ca4c0bd1E06368272732BCb08"
+  },
+  "explorer": {
+    "resolvedAddress": "0xebC2459Ec962869ca4c0bd1E06368272732BCb08",
+    "contractName": "PermissionedRamp",
+    "contractFileName": "src/collateral/PermissionedRamp.sol",
+    "compilerVersion": "v0.8.34+commit.80d5c536",
+    "compilerType": "solc-j",
+    "optimizationUsed": "1",
+    "runs": "1000000",
+    "evmVersion": "prague",
+    "constructorArguments": "00000000000000000000000047ebfac3353314c788b96cdcbf41daadfe03629c0000000000000000000000003dce0a29139a851da1dfca56af8e8a6440b4d952000000000000000000000000c011a7e12a19f7b1f670d46f03b03f3342e82dfb",
+    "licenseType": "",
+    "sourceFiles": [
+      "src/collateral/PermissionedRamp.sol",
+      "lib/solady/src/auth/OwnableRoles.sol",
+      "lib/solady/src/utils/ECDSA.sol",
+      "lib/solady/src/utils/EIP712.sol",
+      "lib/solady/src/utils/SafeTransferLib.sol",
+      "src/collateral/abstract/CollateralErrors.sol",
+      "src/collateral/abstract/Pausable.sol",
+      "src/collateral/CollateralToken.sol",
+      "lib/solady/src/auth/Ownable.sol",
+      "lib/solady/src/tokens/ERC20.sol",
+      "lib/solady/src/utils/Initializable.sol",
+      "lib/solady/src/utils/UUPSUpgradeable.sol",
+      "src/collateral/interfaces/ICollateralToken.sol",
+      "src/collateral/interfaces/ICollateralTokenCallbacks.sol",
+      "lib/solady/src/utils/CallContextChecker.sol"
+    ]
+  }
+}

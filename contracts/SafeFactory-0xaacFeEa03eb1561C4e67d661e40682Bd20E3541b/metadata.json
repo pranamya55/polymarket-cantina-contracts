@@ -1,0 +1,53 @@
+{
+  "name": "SafeFactory",
+  "address": "0xaacFeEa03eb1561C4e67d661e40682Bd20E3541b",
+  "explorerUrl": "https://polygonscan.com/address/0xaacFeEa03eb1561C4e67d661e40682Bd20E3541b",
+  "fetchedAt": "2026-04-13T18:21:35.170Z",
+  "codeSize": 3188,
+  "proxy": {
+    "isProxy": false,
+    "proxyType": null,
+    "implementation": null,
+    "beacon": null,
+    "resolvedAddress": "0xaacFeEa03eb1561C4e67d661e40682Bd20E3541b"
+  },
+  "explorer": {
+    "resolvedAddress": "0xaacFeEa03eb1561C4e67d661e40682Bd20E3541b",
+    "contractName": "SafeProxyFactory",
+    "contractFileName": "contracts/SafeProxyFactory.sol",
+    "compilerVersion": "v0.8.4+commit.c7e474f2",
+    "compilerType": "solc-j",
+    "optimizationUsed": "1",
+    "runs": "200",
+    "evmVersion": "Default",
+    "constructorArguments": "000000000000000000000000e51abdf814f8854941b9fe8e3a4f65cab4e7a4a8000000000000000000000000e16ba5bf81e5bb113e4752e4fdc20351d796fb24",
+    "licenseType": "None",
+    "sourceFiles": [
+      "contracts/Deps.sol",
+      "@gnosis.pm/safe-contracts/contracts/handler/CompatibilityFallbackHandler.sol",
+      "@gnosis.pm/safe-contracts/contracts/handler/DefaultCallbackHandler.sol",
+      "@gnosis.pm/safe-contracts/contracts/interfaces/ISignatureValidator.sol",
+      "@gnosis.pm/safe-contracts/contracts/GnosisSafe.sol",
+      "@gnosis.pm/safe-contracts/contracts/interfaces/ERC1155TokenReceiver.sol",
+      "@gnosis.pm/safe-contracts/contracts/interfaces/ERC721TokenReceiver.sol",
+      "@gnosis.pm/safe-contracts/contracts/interfaces/ERC777TokensRecipient.sol",
+      "@gnosis.pm/safe-contracts/contracts/interfaces/IERC165.sol",
+      "@gnosis.pm/safe-contracts/contracts/base/ModuleManager.sol",
+      "@gnosis.pm/safe-contracts/contracts/base/OwnerManager.sol",
+      "@gnosis.pm/safe-contracts/contracts/base/FallbackManager.sol",
+      "@gnosis.pm/safe-contracts/contracts/base/GuardManager.sol",
+      "@gnosis.pm/safe-contracts/contracts/common/EtherPaymentFallback.sol",
+      "@gnosis.pm/safe-contracts/contracts/common/Singleton.sol",
+      "@gnosis.pm/safe-contracts/contracts/common/SignatureDecoder.sol",
+      "@gnosis.pm/safe-contracts/contracts/common/SecuredTokenTransfer.sol",
+      "@gnosis.pm/safe-contracts/contracts/common/StorageAccessible.sol",
+      "@gnosis.pm/safe-contracts/contracts/external/GnosisSafeMath.sol",
+      "@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
+      "@gnosis.pm/safe-contracts/contracts/common/SelfAuthorized.sol",
+      "@gnosis.pm/safe-contracts/contracts/base/Executor.sol",
+      "contracts/SafeProxyFactory.sol",
+      "@gnosis.pm/safe-contracts/contracts/proxies/GnosisSafeProxy.sol",
+      "@openzeppelin/contracts/utils/cryptography/ECDSA.sol"
+    ]
+  }
+}

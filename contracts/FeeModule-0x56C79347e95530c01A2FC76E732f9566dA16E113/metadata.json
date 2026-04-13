@@ -1,0 +1,40 @@
+{
+  "name": "FeeModule",
+  "address": "0x56C79347e95530c01A2FC76E732f9566dA16E113",
+  "explorerUrl": "https://polygonscan.com/address/0x56C79347e95530c01A2FC76E732f9566dA16E113",
+  "fetchedAt": "2026-04-13T18:21:28.805Z",
+  "codeSize": 5901,
+  "proxy": {
+    "isProxy": false,
+    "proxyType": null,
+    "implementation": null,
+    "beacon": null,
+    "resolvedAddress": "0x56C79347e95530c01A2FC76E732f9566dA16E113"
+  },
+  "explorer": {
+    "resolvedAddress": "0x56C79347e95530c01A2FC76E732f9566dA16E113",
+    "contractName": "FeeModule",
+    "contractFileName": "src/FeeModule.sol",
+    "compilerVersion": "v0.8.15+commit.e14f2714",
+    "compilerType": "solc-j",
+    "optimizationUsed": "1",
+    "runs": "1000000",
+    "evmVersion": "Default",
+    "constructorArguments": "0000000000000000000000004bfb41d5b3570defd03c39a9a4d8de6bd8b8982e",
+    "licenseType": "",
+    "sourceFiles": [
+      "src/FeeModule.sol",
+      "lib/solmate/src/tokens/ERC1155.sol",
+      "src/mixins/Auth.sol",
+      "src/mixins/Transfers.sol",
+      "src/interfaces/IExchange.sol",
+      "src/interfaces/IFeeModule.sol",
+      "src/libraries/Structs.sol",
+      "src/libraries/CalculatorHelper.sol",
+      "src/interfaces/IAuth.sol",
+      "src/libraries/TransferHelper.sol",
+      "lib/solmate/src/utils/SafeTransferLib.sol",
+      "lib/solmate/src/tokens/ERC20.sol"
+    ]
+  }
+}

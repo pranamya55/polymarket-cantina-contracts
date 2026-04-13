@@ -1,0 +1,39 @@
+{
+  "name": "CollateralToken",
+  "address": "0xC011a7E12a19f7B1f670d46F03B03f3342E82DFB",
+  "explorerUrl": "https://polygonscan.com/address/0xC011a7E12a19f7B1f670d46F03B03f3342E82DFB",
+  "fetchedAt": "2026-04-13T18:21:37.101Z",
+  "codeSize": 61,
+  "proxy": {
+    "isProxy": true,
+    "proxyType": "eip1967",
+    "implementation": "0x6bbcef9f7ef3b6c592c99e0f206a0de94ad0925f",
+    "beacon": null,
+    "resolvedAddress": "0x6bbcef9f7ef3b6c592c99e0f206a0de94ad0925f"
+  },
+  "explorer": {
+    "resolvedAddress": "0x6bbcef9f7ef3b6c592c99e0f206a0de94ad0925f",
+    "contractName": "CollateralToken",
+    "contractFileName": "src/collateral/CollateralToken.sol",
+    "compilerVersion": "v0.8.34+commit.80d5c536",
+    "compilerType": "solc-j",
+    "optimizationUsed": "1",
+    "runs": "1000000",
+    "evmVersion": "prague",
+    "constructorArguments": "0000000000000000000000003c499c542cef5e3811e1192ce70d8cc03d5c33590000000000000000000000002791bca1f2de4661ed88a30c99a7a9449aa84174000000000000000000000000c417fd8e9661c0d2120b64a04bb3278c17e99db1",
+    "licenseType": "",
+    "sourceFiles": [
+      "src/collateral/CollateralToken.sol",
+      "lib/solady/src/auth/OwnableRoles.sol",
+      "lib/solady/src/tokens/ERC20.sol",
+      "lib/solady/src/utils/Initializable.sol",
+      "lib/solady/src/utils/SafeTransferLib.sol",
+      "lib/solady/src/utils/UUPSUpgradeable.sol",
+      "src/collateral/abstract/CollateralErrors.sol",
+      "src/collateral/interfaces/ICollateralToken.sol",
+      "src/collateral/interfaces/ICollateralTokenCallbacks.sol",
+      "lib/solady/src/auth/Ownable.sol",
+      "lib/solady/src/utils/CallContextChecker.sol"
+    ]
+  }
+}

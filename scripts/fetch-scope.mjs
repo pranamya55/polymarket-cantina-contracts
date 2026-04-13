@@ -1,0 +1,381 @@
+#!/usr/bin/env node
+
+import { mkdir, writeFile } from "node:fs/promises";
+import path from "node:path";
+import process from "node:process";
+
+const OUT_DIR = process.cwd();
+const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
+const POLYGON_RPC_URL = process.env.POLYGON_RPC_URL;
+
+const IMPLEMENTATION_SLOT =
+  "0x360894A13BA1A3210667C828492DB98DCA3E2076CC3735A920A3CA505D382BBC";
+const BEACON_SLOT =
+  "0xa3f0ad74e5423aebfd80d3ef4346578335a9a72aeaee59ff6cb3582b35133d50";
+const IMPLEMENTATION_SELECTOR = "0x5c60da1b";
+const EXPLORER_DELAY_MS = 600;
+
+const SCOPE = [
+  {
+    name: "ConditionalTokens",
+    address: "0x4d97dcd97ec945f40cf65f87097ace5ea0476045",
+    explorerUrl: "https://polygonscan.com/address/0x4d97dcd97ec945f40cf65f87097ace5ea0476045",
+  },
+  {
+    name: "CTFExchange",
+    address: "0x4bfb41d5b3570defd03c39a9a4d8de6bd8b8982e",
+    explorerUrl: "https://polygonscan.com/address/0x4bfb41d5b3570defd03c39a9a4d8de6bd8b8982e",
+  },
+  {
+    name: "FeeModule",
+    address: "0x56C79347e95530c01A2FC76E732f9566dA16E113",
+    explorerUrl: "https://polygonscan.com/address/0x56C79347e95530c01A2FC76E732f9566dA16E113",
+  },
+  {
+    name: "NegRiskAdapter",
+    address: "0xd91E80cF2E7be2e162c6513ceD06f1dD0dA35296",
+    explorerUrl: "https://polygonscan.com/address/0xd91E80cF2E7be2e162c6513ceD06f1dD0dA35296",
+  },
+  {
+    name: "NegRiskCtfExchange",
+    address: "0xC5d563A36AE78145C45a50134d48A1215220f80a",
+    explorerUrl: "https://polygonscan.com/address/0xC5d563A36AE78145C45a50134d48A1215220f80a",
+  },
+  {
+    name: "NegRiskFeeModule",
+    address: "0x78769D50Be1763ed1CA0D5E878D93f05aabff29e",
+    explorerUrl: "https://polygonscan.com/address/0x78769D50Be1763ed1CA0D5E878D93f05aabff29e",
+  },
+  {
+    name: "NegRiskOperator",
+    address: "0x71523d0f655B41E805Cec45b17163f528B59B820",
+    explorerUrl: "https://polygonscan.com/address/0x71523d0f655B41E805Cec45b17163f528B59B820",
+  },
+  {
+    name: "NegRiskUmaCtfAdapter",
+    address: "0x2F5e3684cb1F318ec51b00Edba38d79Ac2c0aA9d",
+    explorerUrl: "https://polygonscan.com/address/0x2F5e3684cb1F318ec51b00Edba38d79Ac2c0aA9d",
+  },
+  {
+    name: "NegRiskWrappedCollateral",
+    address: "0x3A3BD7bb9528E159577F7C2e685CC81A765002E2",
+    explorerUrl: "https://polygonscan.com/address/0x3A3BD7bb9528E159577F7C2e685CC81A765002E2",
+  },
+  {
+    name: "ProxyFactory",
+    address: "0xaB45c5A4B0c941a2F231C04C3f49182e1A254052",
+    explorerUrl: "https://polygonscan.com/address/0xaB45c5A4B0c941a2F231C04C3f49182e1A254052",
+  },
+  {
+    name: "SafeFactory",
+    address: "0xaacFeEa03eb1561C4e67d661e40682Bd20E3541b",
+    explorerUrl: "https://polygonscan.com/address/0xaacFeEa03eb1561C4e67d661e40682Bd20E3541b",
+  },
+  {
+    name: "UmaCtfAdapter",
+    address: "0x6A9D222616C90FcA5754cd1333cFD9b7fb6a4F74",
+    explorerUrl: "https://polygonscan.com/address/0x6A9D222616C90FcA5754cd1333cFD9b7fb6a4F74",
+  },
+  {
+    name: "CollateralToken",
+    address: "0xC011a7E12a19f7B1f670d46F03B03f3342E82DFB",
+    explorerUrl: "https://polygonscan.com/address/0xC011a7E12a19f7B1f670d46F03B03f3342E82DFB",
+  },
+  {
+    name: "CollateralOnramp",
+    address: "0x93070a847efEf7F70739046A929D47a521F5B8ee",
+    explorerUrl: "https://polygonscan.com/address/0x93070a847efEf7F70739046A929D47a521F5B8ee",
+  },
+  {
+    name: "CollateralOfframp",
+    address: "0x2957922Eb93258b93368531d39fAcCA3B4dC5854",
+    explorerUrl: "https://polygonscan.com/address/0x2957922Eb93258b93368531d39fAcCA3B4dC5854",
+  },
+  {
+    name: "PermissionedRamp",
+    address: "0xebC2459Ec962869ca4c0bd1E06368272732BCb08",
+    explorerUrl: "https://polygonscan.com/address/0xebC2459Ec962869ca4c0bd1E06368272732BCb08",
+  },
+  {
+    name: "CtfCollateralAdapter",
+    address: "0xADa100874d00e3331D00F2007a9c336a65009718",
+    explorerUrl: "https://polygonscan.com/address/0xADa100874d00e3331D00F2007a9c336a65009718",
+  },
+  {
+    name: "NegRiskCtfCollateralAdapter",
+    address: "0xAdA200001000ef00D07553cEE7006808F895c6F1",
+    explorerUrl: "https://polygonscan.com/address/0xAdA200001000ef00D07553cEE7006808F895c6F1",
+  },
+  {
+    name: "CTFExchangeV2",
+    address: "0xE111180000d2663C0091e4f400237545B87B996B",
+    explorerUrl: "https://polygonscan.com/address/0xE111180000d2663C0091e4f400237545B87B996B",
+  },
+  {
+    name: "NegRiskCtfExchangeV2",
+    address: "0xe2222d279d744050d28e00520010520000310F59",
+    explorerUrl: "https://polygonscan.com/address/0xe2222d279d744050d28e00520010520000310F59",
+  },
+  {
+    name: "Vault",
+    address: "0x7f67327E88c258932D7d8f72950bE0d46975E11D",
+    explorerUrl: "https://polygonscan.com/address/0x7f67327E88c258932D7d8f72950bE0d46975E11D",
+  },
+];
+
+function assertConfig() {
+  if (!ETHERSCAN_API_KEY) {
+    throw new Error("Missing ETHERSCAN_API_KEY");
+  }
+  if (!POLYGON_RPC_URL) {
+    throw new Error("Missing POLYGON_RPC_URL");
+  }
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function rpc(method, params) {
+  const response = await fetch(POLYGON_RPC_URL, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      jsonrpc: "2.0",
+      id: 1,
+      method,
+      params,
+    }),
+  });
+  const json = await response.json();
+  if (json.error) {
+    throw new Error(`RPC ${method} failed: ${JSON.stringify(json.error)}`);
+  }
+  return json.result;
+}
+
+function slotToAddress(value) {
+  if (!value || /^0x0+$/i.test(value)) {
+    return null;
+  }
+  return `0x${value.slice(-40)}`;
+}
+
+function decodeAddressWord(value) {
+  if (!value || value === "0x") {
+    return null;
+  }
+  const hex = value.replace(/^0x/, "");
+  if (hex.length < 64) {
+    return null;
+  }
+  const address = `0x${hex.slice(-40)}`;
+  return /^0x0+$/i.test(address) ? null : address;
+}
+
+async function detectProxy(address) {
+  const [code, implementationRaw, beaconRaw] = await Promise.all([
+    rpc("eth_getCode", [address, "latest"]),
+    rpc("eth_getStorageAt", [address, IMPLEMENTATION_SLOT, "latest"]),
+    rpc("eth_getStorageAt", [address, BEACON_SLOT, "latest"]),
+  ]);
+
+  const implementation = slotToAddress(implementationRaw);
+  const beacon = slotToAddress(beaconRaw);
+
+  if (implementation) {
+    return {
+      codeSize: Math.max((code.length - 2) / 2, 0),
+      isProxy: true,
+      proxyType: "eip1967",
+      implementation,
+      beacon: null,
+    };
+  }
+
+  if (beacon) {
+    const beaconResult = await rpc("eth_call", [{ to: beacon, data: IMPLEMENTATION_SELECTOR }, "latest"]);
+    const beaconImplementation = decodeAddressWord(beaconResult);
+    return {
+      codeSize: Math.max((code.length - 2) / 2, 0),
+      isProxy: Boolean(beaconImplementation),
+      proxyType: beaconImplementation ? "beacon" : null,
+      implementation: beaconImplementation,
+      beacon,
+    };
+  }
+
+  return {
+    codeSize: Math.max((code.length - 2) / 2, 0),
+    isProxy: false,
+    proxyType: null,
+    implementation: null,
+    beacon: null,
+  };
+}
+
+async function getSource(address) {
+  for (let attempt = 1; attempt <= 5; attempt += 1) {
+    const url = new URL("https://api.etherscan.io/v2/api");
+    url.searchParams.set("chainid", "137");
+    url.searchParams.set("module", "contract");
+    url.searchParams.set("action", "getsourcecode");
+    url.searchParams.set("address", address);
+    url.searchParams.set("apikey", ETHERSCAN_API_KEY);
+
+    const response = await fetch(url);
+    const payload = await response.json();
+    const result = payload.result;
+
+    if (Array.isArray(result) && result.length > 0 && result[0].SourceCode) {
+      return result[0];
+    }
+
+    const reason =
+      typeof result === "string"
+        ? result
+        : payload.message || "unknown explorer response";
+    const retryable =
+      /rate limit|timeout|temporar|busy|max/i.test(reason) ||
+      !Array.isArray(result);
+
+    if (!retryable || attempt === 5) {
+      throw new Error(`Explorer source fetch failed for ${address}: ${reason}`);
+    }
+
+    await sleep(EXPLORER_DELAY_MS * attempt);
+  }
+}
+
+function parseSourceFiles(entry) {
+  const sourceCode = (entry.SourceCode || "").trim();
+  if (!sourceCode) {
+    return [];
+  }
+
+  let normalized = sourceCode;
+  if (normalized.startsWith("{{") && normalized.endsWith("}}")) {
+    normalized = normalized.slice(1, -1);
+  }
+
+  if (normalized.startsWith("{")) {
+    const parsed = JSON.parse(normalized);
+    if (parsed.sources && typeof parsed.sources === "object") {
+      return Object.entries(parsed.sources).map(([filePath, value]) => ({
+        filePath,
+        content: typeof value === "string" ? value : value.content,
+      }));
+    }
+  }
+
+  return [
+    {
+      filePath: entry.ContractFileName || `${entry.ContractName || "Contract"}.sol`,
+      content: sourceCode,
+    },
+  ];
+}
+
+function sanitizeSegment(value) {
+  return value.replace(/[^a-zA-Z0-9._-]/g, "_");
+}
+
+function safeRelative(filePath) {
+  const normalized = path.posix.normalize(filePath.replace(/\\/g, "/"));
+  if (normalized.startsWith("/") || normalized.startsWith("../") || normalized === "..") {
+    throw new Error(`Unsafe source path: ${filePath}`);
+  }
+  return normalized;
+}
+
+async function writeJson(filePath, value) {
+  await mkdir(path.dirname(filePath), { recursive: true });
+  await writeFile(filePath, `${JSON.stringify(value, null, 2)}\n`);
+}
+
+async function materializeContract(contract) {
+  const proxy = await detectProxy(contract.address);
+  const resolvedAddress = proxy.implementation || contract.address;
+  const sourceEntry = await getSource(resolvedAddress);
+  const files = parseSourceFiles(sourceEntry);
+
+  const bundleName = `${sanitizeSegment(contract.name)}-${contract.address}`;
+  const bundleRoot = path.join(OUT_DIR, "contracts", bundleName);
+  const sourceRoot = path.join(bundleRoot, "sources");
+
+  await mkdir(sourceRoot, { recursive: true });
+
+  for (const file of files) {
+    const relativePath = safeRelative(file.filePath);
+    const outputPath = path.join(sourceRoot, relativePath);
+    await mkdir(path.dirname(outputPath), { recursive: true });
+    await writeFile(outputPath, file.content);
+  }
+
+  let abi;
+  try {
+    abi = JSON.parse(sourceEntry.ABI);
+  } catch {
+    abi = sourceEntry.ABI;
+  }
+
+  const metadata = {
+    name: contract.name,
+    address: contract.address,
+    explorerUrl: contract.explorerUrl,
+    fetchedAt: new Date().toISOString(),
+    codeSize: proxy.codeSize,
+    proxy: {
+      isProxy: proxy.isProxy,
+      proxyType: proxy.proxyType,
+      implementation: proxy.implementation,
+      beacon: proxy.beacon,
+      resolvedAddress,
+    },
+    explorer: {
+      resolvedAddress,
+      contractName: sourceEntry.ContractName,
+      contractFileName: sourceEntry.ContractFileName,
+      compilerVersion: sourceEntry.CompilerVersion,
+      compilerType: sourceEntry.CompilerType,
+      optimizationUsed: sourceEntry.OptimizationUsed,
+      runs: sourceEntry.Runs,
+      evmVersion: sourceEntry.EVMVersion,
+      constructorArguments: sourceEntry.ConstructorArguments,
+      licenseType: sourceEntry.LicenseType,
+      sourceFiles: files.map((file) => file.filePath),
+    },
+  };
+
+  await writeJson(path.join(bundleRoot, "metadata.json"), metadata);
+  await writeJson(path.join(bundleRoot, "abi.json"), abi);
+
+  return metadata;
+}
+
+async function main() {
+  assertConfig();
+  const manifest = [];
+
+  await writeJson(path.join(OUT_DIR, "metadata", "cantina-scope.json"), {
+    snapshotDate: "2026-04-13",
+    bountyUrl: "https://cantina.xyz/bounties/ff945ca2-2a6e-4b83-b1b6-7a0cd3b94bea",
+    network: "polygon",
+    contracts: SCOPE,
+  });
+
+  for (const contract of SCOPE) {
+    console.log(`Fetching ${contract.name} (${contract.address})`);
+    const metadata = await materializeContract(contract);
+    manifest.push(metadata);
+    await sleep(EXPLORER_DELAY_MS);
+  }
+
+  await writeJson(path.join(OUT_DIR, "metadata", "contracts.json"), manifest);
+  console.log(`Wrote ${manifest.length} contract bundles to ${path.join(OUT_DIR, "contracts")}`);
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

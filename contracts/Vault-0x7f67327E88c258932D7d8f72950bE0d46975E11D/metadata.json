@@ -1,0 +1,35 @@
+{
+  "name": "Vault",
+  "address": "0x7f67327E88c258932D7d8f72950bE0d46975E11D",
+  "explorerUrl": "https://polygonscan.com/address/0x7f67327E88c258932D7d8f72950bE0d46975E11D",
+  "fetchedAt": "2026-04-13T18:21:43.880Z",
+  "codeSize": 2839,
+  "proxy": {
+    "isProxy": false,
+    "proxyType": null,
+    "implementation": null,
+    "beacon": null,
+    "resolvedAddress": "0x7f67327E88c258932D7d8f72950bE0d46975E11D"
+  },
+  "explorer": {
+    "resolvedAddress": "0x7f67327E88c258932D7d8f72950bE0d46975E11D",
+    "contractName": "Vault",
+    "contractFileName": "src/Vault.sol",
+    "compilerVersion": "v0.8.19+commit.7dd6d404",
+    "compilerType": "solc-j",
+    "optimizationUsed": "1",
+    "runs": "1000000",
+    "evmVersion": "paris",
+    "constructorArguments": "",
+    "licenseType": "",
+    "sourceFiles": [
+      "src/Vault.sol",
+      "lib/solmate/src/tokens/ERC20.sol",
+      "lib/solmate/src/utils/SafeTransferLib.sol",
+      "lib/solmate/src/tokens/ERC1155.sol",
+      "src/modules/Auth.sol",
+      "src/interfaces/IConditionalTokens.sol",
+      "src/modules/interfaces/IAuth.sol"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "NegRiskFeeModule",
+  "address": "0x78769D50Be1763ed1CA0D5E878D93f05aabff29e",
+  "explorerUrl": "https://polygonscan.com/address/0x78769D50Be1763ed1CA0D5E878D93f05aabff29e",
+  "fetchedAt": "2026-04-13T18:21:31.157Z",
+  "codeSize": 5967,
+  "proxy": {
+    "isProxy": false,
+    "proxyType": null,
+    "implementation": null,
+    "beacon": null,
+    "resolvedAddress": "0x78769D50Be1763ed1CA0D5E878D93f05aabff29e"
+  },
+  "explorer": {
+    "resolvedAddress": "0x78769D50Be1763ed1CA0D5E878D93f05aabff29e",
+    "contractName": "NegRiskFeeModule",
+    "contractFileName": "src/NegRiskFeeModule.sol",
+    "compilerVersion": "v0.8.15+commit.e14f2714",
+    "compilerType": "solc-j",
+    "optimizationUsed": "1",
+    "runs": "1000000",
+    "evmVersion": "london",
+    "constructorArguments": "000000000000000000000000c5d563a36ae78145c45a50134d48a1215220f80a000000000000000000000000d91e80cf2e7be2e162c6513ced06f1dd0da352960000000000000000000000004d97dcd97ec945f40cf65f87097ace5ea0476045",
+    "licenseType": "",
+    "sourceFiles": [
+      "src/NegRiskFeeModule.sol",
+      "lib/exchange-fee-module/src/FeeModule.sol",
+      "src/interfaces/IConditionalTokens.sol",
+      "lib/solmate/src/tokens/ERC1155.sol",
+      "lib/exchange-fee-module/src/mixins/Auth.sol",
+      "lib/exchange-fee-module/src/mixins/Transfers.sol",
+      "lib/exchange-fee-module/src/interfaces/IExchange.sol",
+      "lib/exchange-fee-module/src/interfaces/IFeeModule.sol",
+      "lib/exchange-fee-module/src/libraries/Structs.sol",
+      "lib/exchange-fee-module/src/libraries/CalculatorHelper.sol",
+      "lib/exchange-fee-module/src/interfaces/IAuth.sol",
+      "lib/exchange-fee-module/src/libraries/TransferHelper.sol",
+      "lib/solmate/src/utils/SafeTransferLib.sol",
+      "lib/solmate/src/tokens/ERC20.sol"
+    ]
+  }
+}

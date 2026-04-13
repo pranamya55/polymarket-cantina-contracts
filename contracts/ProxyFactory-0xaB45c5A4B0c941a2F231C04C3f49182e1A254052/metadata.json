@@ -1,0 +1,50 @@
+{
+  "name": "ProxyFactory",
+  "address": "0xaB45c5A4B0c941a2F231C04C3f49182e1A254052",
+  "explorerUrl": "https://polygonscan.com/address/0xaB45c5A4B0c941a2F231C04C3f49182e1A254052",
+  "fetchedAt": "2026-04-13T18:21:34.347Z",
+  "codeSize": 6945,
+  "proxy": {
+    "isProxy": false,
+    "proxyType": null,
+    "implementation": null,
+    "beacon": null,
+    "resolvedAddress": "0xaB45c5A4B0c941a2F231C04C3f49182e1A254052"
+  },
+  "explorer": {
+    "resolvedAddress": "0xaB45c5A4B0c941a2F231C04C3f49182e1A254052",
+    "contractName": "ProxyWalletFactory",
+    "contractFileName": "contracts/ProxyWallet/ProxyWalletFactory.sol",
+    "compilerVersion": "v0.5.10+commit.5a6ea5b1",
+    "compilerType": "solc-j",
+    "optimizationUsed": "1",
+    "runs": "200",
+    "evmVersion": "Default",
+    "constructorArguments": "",
+    "licenseType": "",
+    "sourceFiles": [
+      "contracts/ProxyWallet/ProxyWalletFactory.sol",
+      "@openzeppelin/contracts/GSN/GSNRecipient.sol",
+      "@openzeppelin/contracts/ownership/Ownable.sol",
+      "@gnosis.pm/conditional-tokens-contracts/contracts/ERC1155/ERC1155TokenReceiver.sol",
+      "openzeppelin-solidity/contracts/utils/Create2.sol",
+      "contracts/libraries/RevertCaptureLib.sol",
+      "contracts/ProxyWallet/ProxyWalletLib.sol",
+      "contracts/ProxyWallet/ProxyWallet.sol",
+      "contracts/libraries/FactoryLib.sol",
+      "contracts/GSNModules/GSNLib.sol",
+      "contracts/GSNModules/GSNModule01.sol",
+      "contracts/interfaces/IGSNModule.sol",
+      "@openzeppelin/contracts/GSN/IRelayRecipient.sol",
+      "@openzeppelin/contracts/GSN/IRelayHub.sol",
+      "@openzeppelin/contracts/GSN/Context.sol",
+      "@gnosis.pm/conditional-tokens-contracts/contracts/ERC1155/IERC1155TokenReceiver.sol",
+      "openzeppelin-solidity/contracts/introspection/ERC165.sol",
+      "openzeppelin-solidity/contracts/introspection/IERC165.sol",
+      "contracts/libraries/SliceLib.sol",
+      "contracts/libraries/MemcpyLib.sol",
+      "@openzeppelin/contracts/utils/Create2.sol",
+      "contracts/interfaces/IProxyWalletFactory.sol"
+    ]
+  }
+}

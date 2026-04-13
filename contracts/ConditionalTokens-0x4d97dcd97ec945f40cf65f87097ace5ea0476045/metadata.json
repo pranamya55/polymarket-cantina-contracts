@@ -1,0 +1,29 @@
+{
+  "name": "ConditionalTokens",
+  "address": "0x4d97dcd97ec945f40cf65f87097ace5ea0476045",
+  "explorerUrl": "https://polygonscan.com/address/0x4d97dcd97ec945f40cf65f87097ace5ea0476045",
+  "fetchedAt": "2026-04-13T18:21:25.953Z",
+  "codeSize": 15007,
+  "proxy": {
+    "isProxy": false,
+    "proxyType": null,
+    "implementation": null,
+    "beacon": null,
+    "resolvedAddress": "0x4d97dcd97ec945f40cf65f87097ace5ea0476045"
+  },
+  "explorer": {
+    "resolvedAddress": "0x4d97dcd97ec945f40cf65f87097ace5ea0476045",
+    "contractName": "ConditionalTokens",
+    "contractFileName": "",
+    "compilerVersion": "v0.5.10+commit.5a6ea5b1",
+    "compilerType": "solc",
+    "optimizationUsed": "1",
+    "runs": "200",
+    "evmVersion": "Default",
+    "constructorArguments": "",
+    "licenseType": "GNU LGPLv3",
+    "sourceFiles": [
+      "ConditionalTokens.sol"
+    ]
+  }
+}

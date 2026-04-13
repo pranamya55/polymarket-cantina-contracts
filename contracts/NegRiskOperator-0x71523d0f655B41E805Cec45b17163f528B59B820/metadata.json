@@ -1,0 +1,42 @@
+{
+  "name": "NegRiskOperator",
+  "address": "0x71523d0f655B41E805Cec45b17163f528B59B820",
+  "explorerUrl": "https://polygonscan.com/address/0x71523d0f655B41E805Cec45b17163f528B59B820",
+  "fetchedAt": "2026-04-13T18:21:31.899Z",
+  "codeSize": 5176,
+  "proxy": {
+    "isProxy": false,
+    "proxyType": null,
+    "implementation": null,
+    "beacon": null,
+    "resolvedAddress": "0x71523d0f655B41E805Cec45b17163f528B59B820"
+  },
+  "explorer": {
+    "resolvedAddress": "0x71523d0f655B41E805Cec45b17163f528B59B820",
+    "contractName": "NegRiskOperator",
+    "contractFileName": "src/NegRiskOperator.sol",
+    "compilerVersion": "v0.8.19+commit.7dd6d404",
+    "compilerType": "solc-j",
+    "optimizationUsed": "1",
+    "runs": "1000000",
+    "evmVersion": "paris",
+    "constructorArguments": "000000000000000000000000d91e80cf2e7be2e162c6513ced06f1dd0da35296",
+    "licenseType": "",
+    "sourceFiles": [
+      "src/NegRiskOperator.sol",
+      "src/NegRiskAdapter.sol",
+      "src/modules/Auth.sol",
+      "src/modules/interfaces/IAuth.sol",
+      "src/libraries/NegRiskIdLib.sol",
+      "lib/solmate/src/tokens/ERC1155.sol",
+      "lib/solmate/src/tokens/ERC20.sol",
+      "lib/solmate/src/utils/SafeTransferLib.sol",
+      "src/WrappedCollateral.sol",
+      "src/modules/MarketDataManager.sol",
+      "src/libraries/CTHelpers.sol",
+      "src/libraries/Helpers.sol",
+      "src/interfaces/IConditionalTokens.sol",
+      "src/types/MarketData.sol"
+    ]
+  }
+}

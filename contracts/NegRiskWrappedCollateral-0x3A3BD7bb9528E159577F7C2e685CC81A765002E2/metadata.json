@@ -1,0 +1,31 @@
+{
+  "name": "NegRiskWrappedCollateral",
+  "address": "0x3A3BD7bb9528E159577F7C2e685CC81A765002E2",
+  "explorerUrl": "https://polygonscan.com/address/0x3A3BD7bb9528E159577F7C2e685CC81A765002E2",
+  "fetchedAt": "2026-04-13T18:21:33.598Z",
+  "codeSize": 4914,
+  "proxy": {
+    "isProxy": false,
+    "proxyType": null,
+    "implementation": null,
+    "beacon": null,
+    "resolvedAddress": "0x3A3BD7bb9528E159577F7C2e685CC81A765002E2"
+  },
+  "explorer": {
+    "resolvedAddress": "0x3A3BD7bb9528E159577F7C2e685CC81A765002E2",
+    "contractName": "WrappedCollateral",
+    "contractFileName": "src/WrappedCollateral.sol",
+    "compilerVersion": "v0.8.19+commit.7dd6d404",
+    "compilerType": "solc-j",
+    "optimizationUsed": "1",
+    "runs": "1000000",
+    "evmVersion": "paris",
+    "constructorArguments": "0000000000000000000000002791bca1f2de4661ed88a30c99a7a9449aa841740000000000000000000000000000000000000000000000000000000000000006",
+    "licenseType": "",
+    "sourceFiles": [
+      "src/WrappedCollateral.sol",
+      "lib/solmate/src/tokens/ERC20.sol",
+      "lib/solmate/src/utils/SafeTransferLib.sol"
+    ]
+  }
+}

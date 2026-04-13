@@ -1,0 +1,45 @@
+{
+  "name": "NegRiskUmaCtfAdapter",
+  "address": "0x2F5e3684cb1F318ec51b00Edba38d79Ac2c0aA9d",
+  "explorerUrl": "https://polygonscan.com/address/0x2F5e3684cb1F318ec51b00Edba38d79Ac2c0aA9d",
+  "fetchedAt": "2026-04-13T18:21:32.871Z",
+  "codeSize": 16185,
+  "proxy": {
+    "isProxy": false,
+    "proxyType": null,
+    "implementation": null,
+    "beacon": null,
+    "resolvedAddress": "0x2F5e3684cb1F318ec51b00Edba38d79Ac2c0aA9d"
+  },
+  "explorer": {
+    "resolvedAddress": "0x2F5e3684cb1F318ec51b00Edba38d79Ac2c0aA9d",
+    "contractName": "UmaCtfAdapter",
+    "contractFileName": "src/UmaCtfAdapter.sol",
+    "compilerVersion": "v0.8.15+commit.e14f2714",
+    "compilerType": "solc-j",
+    "optimizationUsed": "1",
+    "runs": "1000000",
+    "evmVersion": "Default",
+    "constructorArguments": "",
+    "licenseType": "",
+    "sourceFiles": [
+      "src/UmaCtfAdapter.sol",
+      "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+      "src/mixins/Auth.sol",
+      "src/mixins/BulletinBoard.sol",
+      "src/libraries/TransferHelper.sol",
+      "src/libraries/PayoutHelperLib.sol",
+      "src/libraries/AncillaryDataLib.sol",
+      "src/interfaces/IFinder.sol",
+      "src/interfaces/IAddressWhitelist.sol",
+      "src/interfaces/IConditionalTokens.sol",
+      "src/interfaces/IOptimisticOracleV2.sol",
+      "src/interfaces/IOptimisticRequester.sol",
+      "src/interfaces/IUmaCtfAdapter.sol",
+      "src/interfaces/IAuth.sol",
+      "src/interfaces/IBulletinBoard.sol",
+      "lib/solmate/src/utils/SafeTransferLib.sol",
+      "lib/solmate/src/tokens/ERC20.sol"
+    ]
+  }
+}

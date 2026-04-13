@@ -1,0 +1,44 @@
+{
+  "name": "UmaCtfAdapter",
+  "address": "0x6A9D222616C90FcA5754cd1333cFD9b7fb6a4F74",
+  "explorerUrl": "https://polygonscan.com/address/0x6A9D222616C90FcA5754cd1333cFD9b7fb6a4F74",
+  "fetchedAt": "2026-04-13T18:21:35.956Z",
+  "codeSize": 14139,
+  "proxy": {
+    "isProxy": false,
+    "proxyType": null,
+    "implementation": null,
+    "beacon": null,
+    "resolvedAddress": "0x6A9D222616C90FcA5754cd1333cFD9b7fb6a4F74"
+  },
+  "explorer": {
+    "resolvedAddress": "0x6A9D222616C90FcA5754cd1333cFD9b7fb6a4F74",
+    "contractName": "UmaCtfAdapter",
+    "contractFileName": "src/UmaCtfAdapter.sol",
+    "compilerVersion": "v0.8.15+commit.e14f2714",
+    "compilerType": "solc-j",
+    "optimizationUsed": "1",
+    "runs": "1000000",
+    "evmVersion": "Default",
+    "constructorArguments": "0000000000000000000000004d97dcd97ec945f40cf65f87097ace5ea047604500000000000000000000000009aea4b2242abc8bb4bb78d537a67a245a7bec64",
+    "licenseType": "",
+    "sourceFiles": [
+      "lib/openzeppelin-contracts/contracts/security/ReentrancyGuard.sol",
+      "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+      "lib/solmate/src/tokens/ERC20.sol",
+      "lib/solmate/src/utils/SafeTransferLib.sol",
+      "src/UmaCtfAdapter.sol",
+      "src/interfaces/IAddressWhitelist.sol",
+      "src/interfaces/IAuth.sol",
+      "src/interfaces/IConditionalTokens.sol",
+      "src/interfaces/IFinder.sol",
+      "src/interfaces/IOptimisticOracleV2.sol",
+      "src/interfaces/IOptimisticRequester.sol",
+      "src/interfaces/IUmaCtfAdapter.sol",
+      "src/libraries/AncillaryDataLib.sol",
+      "src/libraries/TransferHelper.sol",
+      "src/mixins/Auth.sol",
+      "src/mixins/BulletinBoard.sol"
+    ]
+  }
+}
