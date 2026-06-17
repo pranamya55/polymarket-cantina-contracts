@@ -1,112 +1,269 @@
 {
-  "snapshotDate": "2026-04-13",
+  "fetchedAt": "2026-06-17T20:52:32.678Z",
+  "snapshotDate": "2026-06-17",
+  "bountyId": "ff945ca2-2a6e-4b83-b1b6-7a0cd3b94bea",
   "bountyUrl": "https://cantina.xyz/bounties/ff945ca2-2a6e-4b83-b1b6-7a0cd3b94bea",
+  "bountyName": "Polymarket",
+  "company": "Polymarket",
+  "status": "live",
   "network": "polygon",
+  "totalRewardPot": "5000000",
+  "assetGroup": {
+    "id": "eba670e0-4af9-4725-acb2-1e338256029e",
+    "name": "Smart Contract",
+    "description": "**Network:** All smart contracts are deployed on **Polygon PoS** (Chain ID: 137). Only vulnerabilities affecting mainnet deployments are eligible.\n\n\n### Critical Reward Calculation\n\n**Mainnet assets:**\n\n- Reward amount is 10% of the funds directly affected up to a maximum of: **$5,000,000**\n- Minimum reward to discourage security researchers from withholding a bug report: **$50,000**\n",
+    "rewards": [
+      {
+        "severity": "critical",
+        "minReward": "50000.00",
+        "maxReward": "5000000.00"
+      },
+      {
+        "severity": "high",
+        "minReward": "10000.00",
+        "maxReward": "500000.00"
+      },
+      {
+        "severity": "medium",
+        "minReward": "2500.00",
+        "maxReward": "50000.00"
+      },
+      {
+        "severity": "low",
+        "minReward": "1000.00",
+        "maxReward": "5000.00"
+      },
+      {
+        "severity": "informational",
+        "minReward": null,
+        "maxReward": null
+      }
+    ]
+  },
   "contracts": [
     {
+      "assetId": "9350b907-0df9-4c4b-abb5-13341123112a",
       "name": "ConditionalTokens",
+      "description": "Gnosis Conditional Tokens Framework (ERC1155). Manages all prediction market position tokens — condition preparation, position splitting/merging, payout reporting, and redemption. Uses ECMH for collection ID derivation. Holds all collateral backing positions. **Third-party contract: only vulnerabilities arising from Polymarket's integration patterns are in scope.**",
       "address": "0x4d97dcd97ec945f40cf65f87097ace5ea0476045",
       "explorerUrl": "https://polygonscan.com/address/0x4d97dcd97ec945f40cf65f87097ace5ea0476045"
     },
     {
-      "name": "CTFExchange",
-      "address": "0x4bfb41d5b3570defd03c39a9a4d8de6bd8b8982e",
-      "explorerUrl": "https://polygonscan.com/address/0x4bfb41d5b3570defd03c39a9a4d8de6bd8b8982e"
-    },
-    {
+      "assetId": "20b53821-a5e0-400c-9979-e7b4af28d32b",
       "name": "FeeModule",
+      "description": "Fee proxy that intercepts order matching, delegates to CTFExchange, and handles maker fee refunds based on BPS calculations. Admin-only matchOrders() and withdrawFees().",
       "address": "0x56C79347e95530c01A2FC76E732f9566dA16E113",
       "explorerUrl": "https://polygonscan.com/address/0x56C79347e95530c01A2FC76E732f9566dA16E113"
     },
     {
+      "assetId": "468ae9e9-d2e7-4f7e-8ede-4dda4ed24ca0",
       "name": "NegRiskAdapter",
+      "description": "Core adapter for multi-outcome (negative risk) markets. Manages YES/NO position conversion, collateral splitting/merging/redemption via WrappedCollateral. Routes fees to Vault.",
       "address": "0xd91E80cF2E7be2e162c6513ceD06f1dD0dA35296",
       "explorerUrl": "https://polygonscan.com/address/0xd91E80cF2E7be2e162c6513ceD06f1dD0dA35296"
     },
     {
-      "name": "NegRiskCtfExchange",
-      "address": "0xC5d563A36AE78145C45a50134d48A1215220f80a",
-      "explorerUrl": "https://polygonscan.com/address/0xC5d563A36AE78145C45a50134d48A1215220f80a"
-    },
-    {
+      "assetId": "8e860cfb-c4f4-4a23-ae0c-080ab7671c3f",
       "name": "NegRiskFeeModule",
+      "description": "Fee module variant for NegRiskCtfExchange with ERC1155 approvals for NegRiskAdapter interaction.",
       "address": "0x78769D50Be1763ed1CA0D5E878D93f05aabff29e",
       "explorerUrl": "https://polygonscan.com/address/0x78769D50Be1763ed1CA0D5E878D93f05aabff29e"
     },
     {
+      "assetId": "99490774-b52a-4f1b-8d67-ea4a331f5c8d",
       "name": "NegRiskOperator",
+      "description": "Permissioned operator for market preparation, question resolution, and dispute flagging. Prevents multiple TRUE resolutions per market.",
       "address": "0x71523d0f655B41E805Cec45b17163f528B59B820",
       "explorerUrl": "https://polygonscan.com/address/0x71523d0f655B41E805Cec45b17163f528B59B820"
     },
     {
+      "assetId": "fb19286d-d3f4-434a-9983-21c1dd5e34b8",
       "name": "NegRiskUmaCtfAdapter",
+      "description": "UmaCtfAdapter instance configured for NegRisk markets. Same codebase as UmaCtfAdapter.",
       "address": "0x2F5e3684cb1F318ec51b00Edba38d79Ac2c0aA9d",
       "explorerUrl": "https://polygonscan.com/address/0x2F5e3684cb1F318ec51b00Edba38d79Ac2c0aA9d"
     },
     {
+      "assetId": "78516ced-4d50-4929-a5fe-ba772667362d",
       "name": "NegRiskWrappedCollateral",
+      "description": "RC20 wrapper around USDC.e enabling the NegRiskAdapter to manage collateral separately from ConditionalTokens. Permissionless unwrap; owner-restricted mint/burn.",
       "address": "0x3A3BD7bb9528E159577F7C2e685CC81A765002E2",
       "explorerUrl": "https://polygonscan.com/address/0x3A3BD7bb9528E159577F7C2e685CC81A765002E2"
     },
     {
+      "assetId": "f4c31bac-a79f-4827-ba15-a8e2a62df634",
       "name": "ProxyFactory",
+      "description": "Deploys deterministic (CREATE2) proxy wallets for Polymarket users. Integrates with Gas Station Network for relay functionality.",
       "address": "0xaB45c5A4B0c941a2F231C04C3f49182e1A254052",
       "explorerUrl": "https://polygonscan.com/address/0xaB45c5A4B0c941a2F231C04C3f49182e1A254052"
     },
     {
+      "assetId": "83ca2937-8cd0-4c2f-bf5f-8ce41633004a",
       "name": "SafeFactory",
+      "description": "eploys deterministic Gnosis Safe proxies for Polymarket users. EIP-712 signature verification for proxy creation.",
       "address": "0xaacFeEa03eb1561C4e67d661e40682Bd20E3541b",
       "explorerUrl": "https://polygonscan.com/address/0xaacFeEa03eb1561C4e67d661e40682Bd20E3541b"
     },
     {
+      "assetId": "02af45dd-d3e0-4341-b91a-3c8786d8685c",
       "name": "UmaCtfAdapter",
+      "description": "Oracle adapter integrating UMA's Optimistic Oracle for market resolution. Handles initialization, data requests, dispute escalation (2-hour proposal period, DVM escalation), and CTF condition resolution.",
       "address": "0x6A9D222616C90FcA5754cd1333cFD9b7fb6a4F74",
       "explorerUrl": "https://polygonscan.com/address/0x6A9D222616C90FcA5754cd1333cFD9b7fb6a4F74"
     },
     {
+      "assetId": "d76e3bba-a02b-405f-baf1-38438a5a93a9",
       "name": "CollateralToken",
+      "description": "UUPS upgradeable ERC20 (pUSD, 6 decimals). Wraps USDC/USDC.e. Role-based access: MINTER_ROLE for mint/burn, WRAPPER_ROLE for wrap/unwrap. Both proxy contract and implementation contract are in scope.",
       "address": "0xC011a7E12a19f7B1f670d46F03B03f3342E82DFB",
       "explorerUrl": "https://polygonscan.com/address/0xC011a7E12a19f7B1f670d46F03B03f3342E82DFB"
     },
     {
+      "assetId": "5bbf363e-3867-46c5-88f3-7917ad1c132d",
       "name": "CollateralOnramp",
+      "description": "Wraps USDC/USDC.e into pUSD (CollateralToken). Admin-gated with pausable per-asset functionality.",
       "address": "0x93070a847efEf7F70739046A929D47a521F5B8ee",
       "explorerUrl": "https://polygonscan.com/address/0x93070a847efEf7F70739046A929D47a521F5B8ee"
     },
     {
+      "assetId": "340e5228-1263-42ea-baca-0f015e3cd44f",
       "name": "CollateralOfframp",
+      "description": "Unwraps pUSD back to USDC/USDC.e. Admin-gated with pausable per-asset functionality.",
       "address": "0x2957922Eb93258b93368531d39fAcCA3B4dC5854",
       "explorerUrl": "https://polygonscan.com/address/0x2957922Eb93258b93368531d39fAcCA3B4dC5854"
     },
     {
+      "assetId": "d2eae117-46ff-4c8f-91d8-ca8b66908217",
       "name": "PermissionedRamp",
+      "description": "EIP-712 witness-signed wrap/unwrap for CollateralToken. Uses nonces for replay protection and deadline-based expiry.",
       "address": "0xebC2459Ec962869ca4c0bd1E06368272732BCb08",
       "explorerUrl": "https://polygonscan.com/address/0xebC2459Ec962869ca4c0bd1E06368272732BCb08"
     },
     {
-      "name": "CtfCollateralAdapter",
-      "address": "0xADa100874d00e3331D00F2007a9c336a65009718",
-      "explorerUrl": "https://polygonscan.com/address/0xADa100874d00e3331D00F2007a9c336a65009718"
-    },
-    {
-      "name": "NegRiskCtfCollateralAdapter",
-      "address": "0xAdA200001000ef00D07553cEE7006808F895c6F1",
-      "explorerUrl": "https://polygonscan.com/address/0xAdA200001000ef00D07553cEE7006808F895c6F1"
-    },
-    {
+      "assetId": "f6fcf0bf-4437-4a6d-8dd9-07e43671f55b",
       "name": "CTFExchangeV2",
+      "description": "V2 exchange with optimized assembly (EIP-712 hashing, event emission, address derivation). Three settlement paths: COMPLEMENTARY (P2P), MINT (split), MERGE. Adds UserPausable, preapproved orders, and builder metadata.",
       "address": "0xE111180000d2663C0091e4f400237545B87B996B",
       "explorerUrl": "https://polygonscan.com/address/0xE111180000d2663C0091e4f400237545B87B996B"
     },
     {
+      "assetId": "8d3a6ba6-3499-460a-a652-e04299e4fc67",
       "name": "NegRiskCtfExchangeV2",
+      "description": "V2 exchange variant for negative risk markets. Same as CTFExchangeV2 with pre-approved NegRiskAdapter interactions.",
       "address": "0xe2222d279d744050d28e00520010520000310F59",
       "explorerUrl": "https://polygonscan.com/address/0xe2222d279d744050d28e00520010520000310F59"
     },
     {
+      "assetId": "6230d50e-6fb2-4ba8-b8d3-64a5e254f43a",
       "name": "Vault",
+      "description": "ERC20/ERC1155 token vault for protocol fees collected by NegRiskAdapter. Admin-controlled transfer functions.",
       "address": "0x7f67327E88c258932D7d8f72950bE0d46975E11D",
       "explorerUrl": "https://polygonscan.com/address/0x7f67327E88c258932D7d8f72950bE0d46975E11D"
+    },
+    {
+      "assetId": "e271fde6-0028-459c-9d9b-db309aba0186",
+      "name": "CtfCollateralAdapter (Address 1)",
+      "description": "Bridges pUSD and CTF for standard markets. Unwraps pUSD to USDC.e for CTF split operations, wraps back on merge. Pausable per-asset.",
+      "address": "0xADa100874d00e3331D00F2007a9c336a65009718",
+      "explorerUrl": "https://polygonscan.com/address/0xADa100874d00e3331D00F2007a9c336a65009718"
+    },
+    {
+      "assetId": "8a7b75aa-92ed-4626-8af6-505d1c5d6cc9",
+      "name": "CtfCollateralAdapter (Address 2)",
+      "description": "Bridges pUSD and CTF for standard markets. Unwraps pUSD to USDC.e for CTF split operations, wraps back on merge. Pausable per-asset.",
+      "address": "0xada100db00ca00073811820692005400218fce1f",
+      "explorerUrl": "https://polygonscan.com/address/0xada100db00ca00073811820692005400218fce1f"
+    },
+    {
+      "assetId": "7cac7feb-9f30-46e2-9c55-605683b88601",
+      "name": "NegRiskCtfCollateralAdapter (Address 1)",
+      "description": "Extends CtfCollateralAdapter for negative risk markets. Adds NO to YES position conversion via NegRiskAdapter.",
+      "address": "0xAdA200001000ef00D07553cEE7006808F895c6F1",
+      "explorerUrl": "https://polygonscan.com/address/0xAdA200001000ef00D07553cEE7006808F895c6F1"
+    },
+    {
+      "assetId": "abddb014-8d44-4df8-8877-2df56ce59b64",
+      "name": "NegRiskCtfCollateralAdapter (Address 2)",
+      "description": "Extends CtfCollateralAdapter for negative risk markets. Adds NO to YES position conversion via NegRiskAdapter.",
+      "address": "0xada2005600dec949baf300f4c6120000bdb6eaab",
+      "explorerUrl": "https://polygonscan.com/address/0xada2005600dec949baf300f4c6120000bdb6eaab"
+    },
+    {
+      "assetId": "366c2617-cdb5-409a-8051-966e754a3824",
+      "name": "DepositWallet (Implementation)",
+      "description": "UUPS-upgradeable smart-contract wallet (logic contract) behind per-user ERC-1967 proxies deployed by the factory. Supports EIP-712 signed batch execution (owner or session signer), ERC-1271 signature validation, two-step ownership transfers, an owner-controlled pause + timelock for emergency asset recovery, and factory-gated UUPS upgrades.",
+      "address": "0x58CA52ebe0DadfdF531Cde7062e76746de4Db1eB",
+      "explorerUrl": "https://polygonscan.com/address/0x58CA52ebe0DadfdF531Cde7062e76746de4Db1eB"
+    },
+    {
+      "assetId": "5b15a402-dcad-48f3-b87e-ddf50ec226a9",
+      "name": "DepositWalletFactory (Implementation)",
+      "description": "Factory logic contract behind the UUPS proxy. Deterministically deploys DepositWallet ERC-1967 proxies (via Solady LibClone) and proxies signed batch executions into them. Three-tier role model (Owner / Admin / Operator) on Solady OwnableRoles; maintains an authorizedImplementation mapping gating wallet deployments and upgrades.",
+      "address": "0xb6F9C7E68A38c21BeDfD873bC5a378236f7ba987",
+      "explorerUrl": "https://polygonscan.com/address/0xb6F9C7E68A38c21BeDfD873bC5a378236f7ba987"
+    },
+    {
+      "assetId": "5d62334f-a511-4c00-997f-1039a939dfe7",
+      "name": "DepositWalletFactory (Proxy)",
+      "description": "User-facing ERC-1967 proxy holding all factory state. UUPS upgrades restricted to the factory owner. Both this proxy and the implementation (DepositWalletFactory (Implementation)) are in scope.",
+      "address": "0x00000000000Fb5C9ADea0298D729A0CB3823Cc07",
+      "explorerUrl": "https://polygonscan.com/address/0x00000000000Fb5C9ADea0298D729A0CB3823Cc07"
+    },
+    {
+      "assetId": "9b0bddf8-ce35-4ea2-9eaa-acc980f916b3",
+      "name": "PositionManager",
+      "description": "ERC1155 PositionManager that mints/burns user positions on behalf of registered modules and encodes module routing directly in each position ID.",
+      "address": "0x006F54F7f9A22e0000CC2AB60031000000ae9fEF",
+      "explorerUrl": "https://polygonscan.com/address/0x006F54F7f9A22e0000CC2AB60031000000ae9fEF"
+    },
+    {
+      "assetId": "b6aa6382-c77e-487f-a9bd-a74f967618ab",
+      "name": "CombinatorialModule",
+      "description": "Multi-leg conjunction module (moduleId=3) handling split, merge, refinement, extraction, compression, redemption, and wrap/unwrap of combinatorial positions.",
+      "address": "0x30000034706C7d8e12009DAB006Be20000c031A8",
+      "explorerUrl": "https://polygonscan.com/address/0x30000034706C7d8e12009DAB006Be20000c031A8"
+    },
+    {
+      "assetId": "980d3ee2-5700-4dcf-bdf2-235f44f82e6d",
+      "name": "Exchange",
+      "description": "EIP-712 order-matching exchange with direct-to-module mint/merge transfers; supports EOA, ERC-1271, POLY_PROXY, and POLY_GNOSIS_SAFE signatures.",
+      "address": "0xe3333700cA9d93003F00f0F71f8515005F6c00Aa",
+      "explorerUrl": "https://polygonscan.com/address/0xe3333700cA9d93003F00f0F71f8515005F6c00Aa"
+    },
+    {
+      "assetId": "11dba204-20a2-4f69-b566-05a687885f0d",
+      "name": "BinaryModule",
+      "description": "YES/NO binary-market module (moduleId=1) handling split/merge/redeem, oracle payout reporting, and the legacy CTF→V2 binary migration path.",
+      "address": "0x1000008dD9001B968442c1000017eaE6E0dA00Ba",
+      "explorerUrl": "https://polygonscan.com/address/0x1000008dD9001B968442c1000017eaE6E0dA00Ba"
+    },
+    {
+      "assetId": "18aa381b-5d2a-424c-92c6-7458adee7842",
+      "name": "NegRiskModule",
+      "description": "Negative-risk multi-outcome module (moduleId=2) supporting horizontal split/merge and NO→YES conversion across event conditions, plus legacy NegRiskAdapter→V2 migration.",
+      "address": "0x200000900045e3B6259600682756002200028933",
+      "explorerUrl": "https://polygonscan.com/address/0x200000900045e3B6259600682756002200028933"
+    },
+    {
+      "assetId": "e924a381-fba4-4ab3-b07c-d8775c5a2940",
+      "name": "Router",
+      "description": "User-facing split/merge/redeem router (and NegRisk horizontal entry points) using the pre-transfer pattern to mint/burn directly through modules.",
+      "address": "0x12121212006e4CD160D18e3f00711DA5c3372600",
+      "explorerUrl": "https://polygonscan.com/address/0x12121212006e4CD160D18e3f00711DA5c3372600"
+    },
+    {
+      "assetId": "63f782a4-89c8-4e6f-a2af-d296d8072c87",
+      "name": "AutoRedeemer",
+      "description": "Batch auto-redemption helper that lets authorised operators redeem resolved V2 and legacy CTF/NegRiskAdapter positions on behalf of users that have approved this contract.",
+      "address": "0xa1200000d0002264C9a1698e001292D00E1b00af",
+      "explorerUrl": "https://polygonscan.com/address/0xa1200000d0002264C9a1698e001292D00E1b00af"
+    },
+    {
+      "assetId": "551fe0e5-befd-4b13-bba8-d394638a1b6c",
+      "name": "Perps ExchangeV1",
+      "description": "Polymarket perpetuals exchange v1 state root commit and fund management contract",
+      "address": "0xdca4af75705dbb50f62437045aff9921947917d2",
+      "explorerUrl": "https://polygonscan.com/address/0xdca4af75705dbb50f62437045aff9921947917d2"
     }
   ]
 }

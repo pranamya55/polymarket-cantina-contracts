@@ -1,8 +1,10 @@
 {
+  "assetId": "8d3a6ba6-3499-460a-a652-e04299e4fc67",
   "name": "NegRiskCtfExchangeV2",
+  "description": "V2 exchange variant for negative risk markets. Same as CTFExchangeV2 with pre-approved NegRiskAdapter interactions.",
   "address": "0xe2222d279d744050d28e00520010520000310F59",
   "explorerUrl": "https://polygonscan.com/address/0xe2222d279d744050d28e00520010520000310F59",
-  "fetchedAt": "2026-04-13T18:21:43.199Z",
+  "fetchedAt": "2026-06-17T20:52:44.401Z",
   "codeSize": 21037,
   "proxy": {
     "isProxy": false,

@@ -1,8 +1,10 @@
 {
+  "assetId": "02af45dd-d3e0-4341-b91a-3c8786d8685c",
   "name": "UmaCtfAdapter",
+  "description": "Oracle adapter integrating UMA's Optimistic Oracle for market resolution. Handles initialization, data requests, dispute escalation (2-hour proposal period, DVM escalation), and CTF condition resolution.",
   "address": "0x6A9D222616C90FcA5754cd1333cFD9b7fb6a4F74",
   "explorerUrl": "https://polygonscan.com/address/0x6A9D222616C90FcA5754cd1333cFD9b7fb6a4F74",
-  "fetchedAt": "2026-04-13T18:21:35.956Z",
+  "fetchedAt": "2026-06-17T20:52:39.891Z",
   "codeSize": 14139,
   "proxy": {
     "isProxy": false,

@@ -1,0 +1,39 @@
+{
+  "assetId": "5d62334f-a511-4c00-997f-1039a939dfe7",
+  "name": "DepositWalletFactory (Proxy)",
+  "description": "User-facing ERC-1967 proxy holding all factory state. UUPS upgrades restricted to the factory owner. Both this proxy and the implementation (DepositWalletFactory (Implementation)) are in scope.",
+  "address": "0x00000000000Fb5C9ADea0298D729A0CB3823Cc07",
+  "explorerUrl": "https://polygonscan.com/address/0x00000000000Fb5C9ADea0298D729A0CB3823Cc07",
+  "fetchedAt": "2026-06-17T20:52:50.637Z",
+  "codeSize": 61,
+  "proxy": {
+    "isProxy": true,
+    "proxyType": "eip1967",
+    "implementation": "0xb6f9c7e68a38c21bedfd873bc5a378236f7ba987",
+    "beacon": null,
+    "resolvedAddress": "0xb6f9c7e68a38c21bedfd873bc5a378236f7ba987"
+  },
+  "explorer": {
+    "resolvedAddress": "0xb6f9c7e68a38c21bedfd873bc5a378236f7ba987",
+    "contractName": "DepositWalletFactory",
+    "contractFileName": "src/DepositWalletFactory.sol",
+    "compilerVersion": "v0.8.34+commit.80d5c536",
+    "compilerType": "solc-j",
+    "optimizationUsed": "1",
+    "runs": "1000000",
+    "evmVersion": "cancun",
+    "constructorArguments": "",
+    "licenseType": "",
+    "sourceFiles": [
+      "src/DepositWalletFactory.sol",
+      "lib/solady/src/auth/OwnableRoles.sol",
+      "lib/solady/src/utils/Initializable.sol",
+      "lib/solady/src/utils/LibClone.sol",
+      "lib/solady/src/utils/UUPSUpgradeable.sol",
+      "src/interfaces/IDepositWallet.sol",
+      "lib/solady/src/auth/Ownable.sol",
+      "lib/solady/src/utils/CallContextChecker.sol",
+      "src/libraries/WalletLib.sol"
+    ]
+  }
+}

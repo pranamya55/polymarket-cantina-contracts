@@ -1,8 +1,10 @@
 {
+  "assetId": "5bbf363e-3867-46c5-88f3-7917ad1c132d",
   "name": "CollateralOnramp",
+  "description": "Wraps USDC/USDC.e into pUSD (CollateralToken). Admin-gated with pausable per-asset functionality.",
   "address": "0x93070a847efEf7F70739046A929D47a521F5B8ee",
   "explorerUrl": "https://polygonscan.com/address/0x93070a847efEf7F70739046A929D47a521F5B8ee",
-  "fetchedAt": "2026-04-13T18:21:37.892Z",
+  "fetchedAt": "2026-06-17T20:52:41.358Z",
   "codeSize": 2651,
   "proxy": {
     "isProxy": false,

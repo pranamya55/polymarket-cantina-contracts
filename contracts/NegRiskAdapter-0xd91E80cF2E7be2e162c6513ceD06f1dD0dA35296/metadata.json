@@ -1,8 +1,10 @@
 {
+  "assetId": "468ae9e9-d2e7-4f7e-8ede-4dda4ed24ca0",
   "name": "NegRiskAdapter",
+  "description": "Core adapter for multi-outcome (negative risk) markets. Manages YES/NO position conversion, collateral splitting/merging/redemption via WrappedCollateral. Routes fees to Vault.",
   "address": "0xd91E80cF2E7be2e162c6513ceD06f1dD0dA35296",
   "explorerUrl": "https://polygonscan.com/address/0xd91E80cF2E7be2e162c6513ceD06f1dD0dA35296",
-  "fetchedAt": "2026-04-13T18:21:29.610Z",
+  "fetchedAt": "2026-06-17T20:52:34.402Z",
   "codeSize": 17258,
   "proxy": {
     "isProxy": false,

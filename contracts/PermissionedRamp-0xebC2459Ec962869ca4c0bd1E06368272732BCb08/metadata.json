@@ -1,8 +1,10 @@
 {
+  "assetId": "d2eae117-46ff-4c8f-91d8-ca8b66908217",
   "name": "PermissionedRamp",
+  "description": "EIP-712 witness-signed wrap/unwrap for CollateralToken. Uses nonces for replay protection and deadline-based expiry.",
   "address": "0xebC2459Ec962869ca4c0bd1E06368272732BCb08",
   "explorerUrl": "https://polygonscan.com/address/0xebC2459Ec962869ca4c0bd1E06368272732BCb08",
-  "fetchedAt": "2026-04-13T18:21:39.823Z",
+  "fetchedAt": "2026-06-17T20:52:42.860Z",
   "codeSize": 4780,
   "proxy": {
     "isProxy": false,

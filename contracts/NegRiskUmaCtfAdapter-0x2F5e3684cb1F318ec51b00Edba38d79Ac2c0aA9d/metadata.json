@@ -1,8 +1,10 @@
 {
+  "assetId": "fb19286d-d3f4-434a-9983-21c1dd5e34b8",
   "name": "NegRiskUmaCtfAdapter",
+  "description": "UmaCtfAdapter instance configured for NegRisk markets. Same codebase as UmaCtfAdapter.",
   "address": "0x2F5e3684cb1F318ec51b00Edba38d79Ac2c0aA9d",
   "explorerUrl": "https://polygonscan.com/address/0x2F5e3684cb1F318ec51b00Edba38d79Ac2c0aA9d",
-  "fetchedAt": "2026-04-13T18:21:32.871Z",
+  "fetchedAt": "2026-06-17T20:52:36.615Z",
   "codeSize": 16185,
   "proxy": {
     "isProxy": false,

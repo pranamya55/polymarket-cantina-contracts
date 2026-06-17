@@ -1,8 +1,10 @@
 {
+  "assetId": "340e5228-1263-42ea-baca-0f015e3cd44f",
   "name": "CollateralOfframp",
+  "description": "Unwraps pUSD back to USDC/USDC.e. Admin-gated with pausable per-asset functionality.",
   "address": "0x2957922Eb93258b93368531d39fAcCA3B4dC5854",
   "explorerUrl": "https://polygonscan.com/address/0x2957922Eb93258b93368531d39fAcCA3B4dC5854",
-  "fetchedAt": "2026-04-13T18:21:38.810Z",
+  "fetchedAt": "2026-06-17T20:52:42.093Z",
   "codeSize": 2653,
   "proxy": {
     "isProxy": false,

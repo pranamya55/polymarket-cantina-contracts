@@ -1,8 +1,10 @@
 {
+  "assetId": "6230d50e-6fb2-4ba8-b8d3-64a5e254f43a",
   "name": "Vault",
+  "description": "ERC20/ERC1155 token vault for protocol fees collected by NegRiskAdapter. Admin-controlled transfer functions.",
   "address": "0x7f67327E88c258932D7d8f72950bE0d46975E11D",
   "explorerUrl": "https://polygonscan.com/address/0x7f67327E88c258932D7d8f72950bE0d46975E11D",
-  "fetchedAt": "2026-04-13T18:21:43.880Z",
+  "fetchedAt": "2026-06-17T20:52:45.081Z",
   "codeSize": 2839,
   "proxy": {
     "isProxy": false,

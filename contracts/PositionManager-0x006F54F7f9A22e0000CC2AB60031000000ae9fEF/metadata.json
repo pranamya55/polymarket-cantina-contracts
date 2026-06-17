@@ -1,0 +1,50 @@
+{
+  "assetId": "9b0bddf8-ce35-4ea2-9eaa-acc980f916b3",
+  "name": "PositionManager",
+  "description": "ERC1155 PositionManager that mints/burns user positions on behalf of registered modules and encodes module routing directly in each position ID.",
+  "address": "0x006F54F7f9A22e0000CC2AB60031000000ae9fEF",
+  "explorerUrl": "https://polygonscan.com/address/0x006F54F7f9A22e0000CC2AB60031000000ae9fEF",
+  "fetchedAt": "2026-06-17T20:52:51.419Z",
+  "codeSize": 61,
+  "proxy": {
+    "isProxy": true,
+    "proxyType": "eip1967",
+    "implementation": "0x30c038f0dae8dcc3e6ad51d016f50821d32cb87e",
+    "beacon": null,
+    "resolvedAddress": "0x30c038f0dae8dcc3e6ad51d016f50821d32cb87e"
+  },
+  "explorer": {
+    "resolvedAddress": "0x30c038f0dae8dcc3e6ad51d016f50821d32cb87e",
+    "contractName": "PositionManager",
+    "contractFileName": "src/positionManager/PositionManager.sol",
+    "compilerVersion": "v0.8.34+commit.80d5c536",
+    "compilerType": "solc-j",
+    "optimizationUsed": "1",
+    "runs": "1000000",
+    "evmVersion": "cancun",
+    "constructorArguments": "000000000000000000000000c011a7e12a19f7b1f670d46f03b03f3342e82dfb",
+    "licenseType": "",
+    "sourceFiles": [
+      "src/positionManager/PositionManager.sol",
+      "lib/solady/src/tokens/ERC1155.sol",
+      "lib/solady/src/utils/Initializable.sol",
+      "lib/solady/src/utils/UUPSUpgradeable.sol",
+      "src/auth/InitializableRoles.sol",
+      "src/libraries/Ids.sol",
+      "src/modules/abstract/BaseModule.sol",
+      "lib/solady/src/utils/CallContextChecker.sol",
+      "lib/solady/src/auth/OwnableRoles.sol",
+      "src/abstract/ERC1155TokenReceiver.sol",
+      "src/collateral/CollateralToken.sol",
+      "src/positionManager/IPositionManagerModule.sol",
+      "src/oracle/interfaces/IBinaryReporter.sol",
+      "src/modules/abstract/ModuleErrors.sol",
+      "src/modules/abstract/OracleModule.sol",
+      "lib/solady/src/auth/Ownable.sol",
+      "lib/solady/src/tokens/ERC20.sol",
+      "lib/solady/src/utils/SafeTransferLib.sol",
+      "src/collateral/abstract/CollateralErrors.sol",
+      "src/collateral/interfaces/ICollateralToken.sol"
+    ]
+  }
+}

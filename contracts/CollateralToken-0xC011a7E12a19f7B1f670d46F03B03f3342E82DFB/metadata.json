@@ -1,8 +1,10 @@
 {
+  "assetId": "d76e3bba-a02b-405f-baf1-38438a5a93a9",
   "name": "CollateralToken",
+  "description": "UUPS upgradeable ERC20 (pUSD, 6 decimals). Wraps USDC/USDC.e. Role-based access: MINTER_ROLE for mint/burn, WRAPPER_ROLE for wrap/unwrap. Both proxy contract and implementation contract are in scope.",
   "address": "0xC011a7E12a19f7B1f670d46F03B03f3342E82DFB",
   "explorerUrl": "https://polygonscan.com/address/0xC011a7E12a19f7B1f670d46F03B03f3342E82DFB",
-  "fetchedAt": "2026-04-13T18:21:37.101Z",
+  "fetchedAt": "2026-06-17T20:52:40.624Z",
   "codeSize": 61,
   "proxy": {
     "isProxy": true,

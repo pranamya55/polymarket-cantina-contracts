@@ -1,8 +1,10 @@
 {
+  "assetId": "78516ced-4d50-4929-a5fe-ba772667362d",
   "name": "NegRiskWrappedCollateral",
+  "description": "RC20 wrapper around USDC.e enabling the NegRiskAdapter to manage collateral separately from ConditionalTokens. Permissionless unwrap; owner-restricted mint/burn.",
   "address": "0x3A3BD7bb9528E159577F7C2e685CC81A765002E2",
   "explorerUrl": "https://polygonscan.com/address/0x3A3BD7bb9528E159577F7C2e685CC81A765002E2",
-  "fetchedAt": "2026-04-13T18:21:33.598Z",
+  "fetchedAt": "2026-06-17T20:52:37.296Z",
   "codeSize": 4914,
   "proxy": {
     "isProxy": false,

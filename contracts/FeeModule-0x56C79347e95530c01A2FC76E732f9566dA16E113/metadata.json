@@ -1,8 +1,10 @@
 {
+  "assetId": "20b53821-a5e0-400c-9979-e7b4af28d32b",
   "name": "FeeModule",
+  "description": "Fee proxy that intercepts order matching, delegates to CTFExchange, and handles maker fee refunds based on BPS calculations. Admin-only matchOrders() and withdrawFees().",
   "address": "0x56C79347e95530c01A2FC76E732f9566dA16E113",
   "explorerUrl": "https://polygonscan.com/address/0x56C79347e95530c01A2FC76E732f9566dA16E113",
-  "fetchedAt": "2026-04-13T18:21:28.805Z",
+  "fetchedAt": "2026-06-17T20:52:33.688Z",
   "codeSize": 5901,
   "proxy": {
     "isProxy": false,

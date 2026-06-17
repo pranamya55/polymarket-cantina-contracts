@@ -1,8 +1,10 @@
 {
+  "assetId": "8e860cfb-c4f4-4a23-ae0c-080ab7671c3f",
   "name": "NegRiskFeeModule",
+  "description": "Fee module variant for NegRiskCtfExchange with ERC1155 approvals for NegRiskAdapter interaction.",
   "address": "0x78769D50Be1763ed1CA0D5E878D93f05aabff29e",
   "explorerUrl": "https://polygonscan.com/address/0x78769D50Be1763ed1CA0D5E878D93f05aabff29e",
-  "fetchedAt": "2026-04-13T18:21:31.157Z",
+  "fetchedAt": "2026-06-17T20:52:35.129Z",
   "codeSize": 5967,
   "proxy": {
     "isProxy": false,

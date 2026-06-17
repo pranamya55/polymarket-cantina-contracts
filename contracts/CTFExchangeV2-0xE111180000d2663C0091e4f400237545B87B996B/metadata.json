@@ -1,8 +1,10 @@
 {
+  "assetId": "f6fcf0bf-4437-4a6d-8dd9-07e43671f55b",
   "name": "CTFExchangeV2",
+  "description": "V2 exchange with optimized assembly (EIP-712 hashing, event emission, address derivation). Three settlement paths: COMPLEMENTARY (P2P), MINT (split), MERGE. Adds UserPausable, preapproved orders, and builder metadata.",
   "address": "0xE111180000d2663C0091e4f400237545B87B996B",
   "explorerUrl": "https://polygonscan.com/address/0xE111180000d2663C0091e4f400237545B87B996B",
-  "fetchedAt": "2026-04-13T18:21:42.236Z",
+  "fetchedAt": "2026-06-17T20:52:43.629Z",
   "codeSize": 21037,
   "proxy": {
     "isProxy": false,

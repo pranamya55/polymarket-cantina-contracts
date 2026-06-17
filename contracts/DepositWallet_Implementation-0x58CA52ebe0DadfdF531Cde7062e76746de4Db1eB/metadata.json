@@ -1,0 +1,51 @@
+{
+  "assetId": "366c2617-cdb5-409a-8051-966e754a3824",
+  "name": "DepositWallet (Implementation)",
+  "description": "UUPS-upgradeable smart-contract wallet (logic contract) behind per-user ERC-1967 proxies deployed by the factory. Supports EIP-712 signed batch execution (owner or session signer), ERC-1271 signature validation, two-step ownership transfers, an owner-controlled pause + timelock for emergency asset recovery, and factory-gated UUPS upgrades.",
+  "address": "0x58CA52ebe0DadfdF531Cde7062e76746de4Db1eB",
+  "explorerUrl": "https://polygonscan.com/address/0x58CA52ebe0DadfdF531Cde7062e76746de4Db1eB",
+  "fetchedAt": "2026-06-17T20:52:49.159Z",
+  "codeSize": 13804,
+  "proxy": {
+    "isProxy": false,
+    "proxyType": null,
+    "implementation": null,
+    "beacon": null,
+    "resolvedAddress": "0x58CA52ebe0DadfdF531Cde7062e76746de4Db1eB"
+  },
+  "explorer": {
+    "resolvedAddress": "0x58CA52ebe0DadfdF531Cde7062e76746de4Db1eB",
+    "contractName": "DepositWallet",
+    "contractFileName": "src/DepositWallet.sol",
+    "compilerVersion": "v0.8.34+commit.80d5c536",
+    "compilerType": "solc-j",
+    "optimizationUsed": "1",
+    "runs": "1000000",
+    "evmVersion": "cancun",
+    "constructorArguments": "",
+    "licenseType": "",
+    "sourceFiles": [
+      "src/DepositWallet.sol",
+      "lib/solady/src/accounts/ERC1271.sol",
+      "lib/solady/src/accounts/Receiver.sol",
+      "lib/solady/src/tokens/ERC1155.sol",
+      "lib/solady/src/utils/ECDSA.sol",
+      "lib/solady/src/utils/Initializable.sol",
+      "lib/solady/src/utils/LibClone.sol",
+      "lib/solady/src/utils/SafeTransferLib.sol",
+      "lib/solady/src/utils/UUPSUpgradeable.sol",
+      "src/DepositWalletFactory.sol",
+      "src/libraries/Ownable.sol",
+      "src/libraries/SessionSignerLib.sol",
+      "src/libraries/WalletLib.sol",
+      "lib/solady/src/utils/EIP712.sol",
+      "lib/solady/src/utils/SignatureCheckerLib.sol",
+      "lib/solady/src/utils/CallContextChecker.sol",
+      "lib/solady/src/auth/OwnableRoles.sol",
+      "src/interfaces/IDepositWallet.sol",
+      "src/Errors.sol",
+      "src/Events.sol",
+      "lib/solady/src/auth/Ownable.sol"
+    ]
+  }
+}

@@ -1,8 +1,10 @@
 {
+  "assetId": "99490774-b52a-4f1b-8d67-ea4a331f5c8d",
   "name": "NegRiskOperator",
+  "description": "Permissioned operator for market preparation, question resolution, and dispute flagging. Prevents multiple TRUE resolutions per market.",
   "address": "0x71523d0f655B41E805Cec45b17163f528B59B820",
   "explorerUrl": "https://polygonscan.com/address/0x71523d0f655B41E805Cec45b17163f528B59B820",
-  "fetchedAt": "2026-04-13T18:21:31.899Z",
+  "fetchedAt": "2026-06-17T20:52:35.868Z",
   "codeSize": 5176,
   "proxy": {
     "isProxy": false,

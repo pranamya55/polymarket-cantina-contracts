@@ -1,8 +1,10 @@
 {
+  "assetId": "83ca2937-8cd0-4c2f-bf5f-8ce41633004a",
   "name": "SafeFactory",
+  "description": "eploys deterministic Gnosis Safe proxies for Polymarket users. EIP-712 signature verification for proxy creation.",
   "address": "0xaacFeEa03eb1561C4e67d661e40682Bd20E3541b",
   "explorerUrl": "https://polygonscan.com/address/0xaacFeEa03eb1561C4e67d661e40682Bd20E3541b",
-  "fetchedAt": "2026-04-13T18:21:35.170Z",
+  "fetchedAt": "2026-06-17T20:52:39.167Z",
   "codeSize": 3188,
   "proxy": {
     "isProxy": false,

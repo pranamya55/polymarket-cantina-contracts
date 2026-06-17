@@ -1,8 +1,10 @@
 {
+  "assetId": "f4c31bac-a79f-4827-ba15-a8e2a62df634",
   "name": "ProxyFactory",
+  "description": "Deploys deterministic (CREATE2) proxy wallets for Polymarket users. Integrates with Gas Station Network for relay functionality.",
   "address": "0xaB45c5A4B0c941a2F231C04C3f49182e1A254052",
   "explorerUrl": "https://polygonscan.com/address/0xaB45c5A4B0c941a2F231C04C3f49182e1A254052",
-  "fetchedAt": "2026-04-13T18:21:34.347Z",
+  "fetchedAt": "2026-06-17T20:52:38.030Z",
   "codeSize": 6945,
   "proxy": {
     "isProxy": false,

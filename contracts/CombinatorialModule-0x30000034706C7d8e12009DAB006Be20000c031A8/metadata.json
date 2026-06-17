@@ -1,0 +1,53 @@
+{
+  "assetId": "b6aa6382-c77e-487f-a9bd-a74f967618ab",
+  "name": "CombinatorialModule",
+  "description": "Multi-leg conjunction module (moduleId=3) handling split, merge, refinement, extraction, compression, redemption, and wrap/unwrap of combinatorial positions.",
+  "address": "0x30000034706C7d8e12009DAB006Be20000c031A8",
+  "explorerUrl": "https://polygonscan.com/address/0x30000034706C7d8e12009DAB006Be20000c031A8",
+  "fetchedAt": "2026-06-17T20:52:52.542Z",
+  "codeSize": 61,
+  "proxy": {
+    "isProxy": true,
+    "proxyType": "eip1967",
+    "implementation": "0xb529b2430d78868422c47934d9d61cc9d0c53dbb",
+    "beacon": null,
+    "resolvedAddress": "0xb529b2430d78868422c47934d9d61cc9d0c53dbb"
+  },
+  "explorer": {
+    "resolvedAddress": "0xb529b2430d78868422c47934d9d61cc9d0c53dbb",
+    "contractName": "CombinatorialModule",
+    "contractFileName": "src/modules/CombinatorialModule.sol",
+    "compilerVersion": "v0.8.34+commit.80d5c536",
+    "compilerType": "solc-j",
+    "optimizationUsed": "1",
+    "runs": "1000000",
+    "evmVersion": "cancun",
+    "constructorArguments": "000000000000000000000000006f54f7f9a22e0000cc2ab60031000000ae9fef",
+    "licenseType": "",
+    "sourceFiles": [
+      "src/modules/CombinatorialModule.sol",
+      "lib/solady/src/utils/Initializable.sol",
+      "lib/solady/src/utils/UUPSUpgradeable.sol",
+      "lib/solady/src/utils/FixedPointMathLib.sol",
+      "src/abstract/ERC1155TokenReceiver.sol",
+      "src/auth/InitializableRoles.sol",
+      "src/collateral/CollateralToken.sol",
+      "src/libraries/Ids.sol",
+      "src/libraries/ModuleIds.sol",
+      "src/modules/abstract/BaseModule.sol",
+      "src/positionManager/IPositionManagerModule.sol",
+      "src/positionManager/PositionManager.sol",
+      "lib/solady/src/utils/CallContextChecker.sol",
+      "lib/solady/src/auth/OwnableRoles.sol",
+      "lib/solady/src/tokens/ERC20.sol",
+      "lib/solady/src/utils/SafeTransferLib.sol",
+      "src/collateral/abstract/CollateralErrors.sol",
+      "src/collateral/interfaces/ICollateralToken.sol",
+      "src/oracle/interfaces/IBinaryReporter.sol",
+      "src/modules/abstract/ModuleErrors.sol",
+      "src/modules/abstract/OracleModule.sol",
+      "lib/solady/src/tokens/ERC1155.sol",
+      "lib/solady/src/auth/Ownable.sol"
+    ]
+  }
+}

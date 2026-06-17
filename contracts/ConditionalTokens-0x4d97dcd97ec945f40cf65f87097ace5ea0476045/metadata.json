@@ -1,8 +1,10 @@
 {
+  "assetId": "9350b907-0df9-4c4b-abb5-13341123112a",
   "name": "ConditionalTokens",
+  "description": "Gnosis Conditional Tokens Framework (ERC1155). Manages all prediction market position tokens — condition preparation, position splitting/merging, payout reporting, and redemption. Uses ECMH for collection ID derivation. Holds all collateral backing positions. **Third-party contract: only vulnerabilities arising from Polymarket's integration patterns are in scope.**",
   "address": "0x4d97dcd97ec945f40cf65f87097ace5ea0476045",
   "explorerUrl": "https://polygonscan.com/address/0x4d97dcd97ec945f40cf65f87097ace5ea0476045",
-  "fetchedAt": "2026-04-13T18:21:25.953Z",
+  "fetchedAt": "2026-06-17T20:52:33.003Z",
   "codeSize": 15007,
   "proxy": {
     "isProxy": false,
